@@ -1,0 +1,3 @@
+[submodule "guidelines_writing_papers"]
+	path = guidelines_writing_papers
+	url = git@github.com:jerabaul29/guidelines_writing_papers.git

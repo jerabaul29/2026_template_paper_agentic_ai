@@ -1,0 +1,42 @@
+# LaTeX files generated during compilation
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.brd
+*.brg
+*.brl
+*.dvi
+*.fls
+*.fdb_latexmk
+*.glg
+*.glo
+*.gls
+*.idx
+*.ilg
+*.ind
+*.lof
+*.log
+*.lot
+*.maf
+*.mtc
+*.mtc1
+*.nav
+*.out
+*.pdfsync
+*.ps
+*.snm
+*.soc
+*.synctex.gz
+*.synctex.gz(busy)
+*.toc
+*.vrb
+*.run.xml
+
+# Bibliography auxiliary files (bibtex/biblatex/biber)
+*-blx.aux
+*-blx.bib
+
+# Build tool directories for auxiliary files (e.g., latexrun)
+latex.out/
+auto/
