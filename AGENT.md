@@ -65,20 +65,22 @@ For example, \citet{zhao2017gap} suggests that arrays of adjacent floating bodie
 
 - The whole project is under git version control; when asked to do a task, check `git diff` to see if any guidelines or instructions or other have been updated, and make sure to follow these.
 
-- The manuscript should be compiled with LaTex; to make sure the manuscript, references, bibliography, etc, get compiled, you should use in the relevant `v` folder something along the lines of (the `.tex` and `.aux` files may have different names):
+- The manuscript should be compiled with LaTex; each `v` folder contains a `compile.sh` script that runs the full pdflatex + bibtex cycle and logs all output to `compile.log` (overwritten on each run). Use it from inside the relevant `v` folder:
 
 ```bash
-timeout 20 pdflatex -interaction=nonstopmode -halt-on-error main.tex
-timeout 20 bibtex main.aux
-timeout 20 pdflatex -interaction=nonstopmode -halt-on-error main.tex
-timeout 20 pdflatex -interaction=nonstopmode -halt-on-error main.tex
+cd v1  # or whichever version you are working on
+bash compile.sh
 ```
+
+The script exits with a non-zero code on error. Always check `compile.log` for warnings and errors after compilation.
 
 - When compiling or running any command to build the document, make sure there are no errors in the logs / check the logs, if there are some iterate on the source until things compile.
 
+- When starting fresh from the template or creating a new `v` folder, check that no stale build artifacts (`.aux`, `.bbl`, `.blg`, `.log`, `.out`, `.pdf`) are present from a previous paper. If any are found, remove them before compiling so they do not mislead or produce a mismatched output.
+
 - When asked to generate a latex diff:
   - copy the `.tex` file from the before-last/newest `v` folder (for example, if the highest version is `v3`, this would be `v2`) into the last/newest `v` folder (this would be `v3`), under the name `old.tex`
-  - use latexdiff to generate a diff and compile it; for example this may look along the lines of (the compilation rules and instructions above are still valid):
+  - use latexdiff to generate a diff and compile it manually (note: `compile.sh` targets `main.tex`; for the diff use the raw commands):
 
   ```bash
   latexdiff old.tex main.tex > diff.tex
