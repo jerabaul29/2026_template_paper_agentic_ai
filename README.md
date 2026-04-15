@@ -4,6 +4,8 @@ A template for getting help from Agentic AI to write papers. Works typically wel
 
 Start by asking the AI to read the `AGENT.md` and all related files.
 
+The key idea is to have the human prepare the main ideas and outlines etc as bullet points, and let the AI Agent turn these into well-polished academic style text.
+
 ## Repository layout
 
 ```
