@@ -17,7 +17,7 @@ Start by asking the AI to read the `AGENT.md` and all related files.
     ├── figs/                   # All figures (flat folder)
     ├── arxiv.sty               # ArXiv style file
     ├── main.tex                # Full LaTeX manuscript
-    ├── references.bib          # All references (do not hand-edit; export from a reference manager)
+    ├── references.bib          # All references; export from a reference manager or hand-edit — the AI should not edit this without being asked
     ├── compile.sh              # Compile script (logs to compile.log, overwritten each run)
     └── INSTRUCTIONS.md         # Human-written content spec / bullet-point outline for this version
 ```

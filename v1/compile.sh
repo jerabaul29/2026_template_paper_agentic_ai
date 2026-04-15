@@ -2,8 +2,11 @@
 # Compile the LaTeX manuscript (pdflatex + bibtex cycle).
 # All output is logged to compile.log (overwritten each run).
 # Exit code is non-zero if any step fails.
+# Safe to run from any directory — always operates relative to the script location.
 
 set -euo pipefail
+
+cd "$(dirname "$0")"
 
 LOG=compile.log
 

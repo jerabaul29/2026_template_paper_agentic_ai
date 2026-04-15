@@ -8,7 +8,7 @@ The main task is to help going from bullet-point-like summary to proper text. Ma
 
 ## General organization of the repository
 
-- The manuscript comes in several consecutive main versions. Each of these is in an own folder with `v`, such as `v1`, `v2`, etc. For example `v2` starts with a copy of `v1`, with further changes gradually applied. Only start a new version if the user asks for it, otherwise edit the highest version. Each version is self contained - for example, copy all the figures (`figs` folder).
+- The manuscript comes in several consecutive main versions. Each of these is in an own folder with `v`, such as `v1`, `v2`, etc. For example `v2` starts with a copy of `v1`, with further changes gradually applied. Only start a new version if the user asks for it, otherwise edit the highest version. Each version is self contained - for example, copy all the figures (`figs` folder) and the `compile.sh` script.
 - The root of the repository contains the general instructions.
 - By default when asked to do some work, do so in the latest `v` folder (the one with the highest version name).
 
@@ -72,7 +72,7 @@ cd v1  # or whichever version you are working on
 bash compile.sh
 ```
 
-The script exits with a non-zero code on error. Always check `compile.log` for warnings and errors after compilation.
+The script exits with a non-zero code on error. Always check `compile.log` for warnings and errors after compilation. Note: `compile.log` is covered by `*.log` in `.gitignore` and should not be committed.
 
 - When compiling or running any command to build the document, make sure there are no errors in the logs / check the logs, if there are some iterate on the source until things compile.
 
